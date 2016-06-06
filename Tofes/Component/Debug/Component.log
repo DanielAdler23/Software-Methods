@@ -1,0 +1,13 @@
+﻿Build started 03-May-16 4:11:12 PM.
+     1>Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Component\Component.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\Component.pdb" /Gd /TP /analyze- /errorReport:prompt Component.cpp
+         Component.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Debug\Component.lib" /NOLOGO Debug\Component.obj
+         Component.vcxproj -> C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Debug\Component.lib
+     1>Done Building Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Component\Component.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.56

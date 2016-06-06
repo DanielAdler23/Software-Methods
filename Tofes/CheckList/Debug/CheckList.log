@@ -1,0 +1,12 @@
+﻿Build started 03-May-16 4:11:44 PM.
+     1>Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\CheckList\CheckList.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Debug\CheckList.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Debug\CheckList.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Debug\CheckList.lib" /MACHINE:X86 Debug\Checklist.obj
+         Debug\Main.obj
+         "C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Debug\Component.lib"
+         CheckList.vcxproj -> C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Debug\CheckList.exe
+     1>Done Building Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\CheckList\CheckList.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.31

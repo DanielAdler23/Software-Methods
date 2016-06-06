@@ -1,0 +1,18 @@
+﻿Build started 03-May-16 4:11:13 PM.
+     1>Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\RadioList\RadioList.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp Radiolist.cpp
+         Radiolist.cpp
+     1>c:\users\daniel\documents\github\methods-course\tofes\radiolist\radiolist.cpp(95): warning C4018: '<': signed/unsigned mismatch
+         Main.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Debug\RadioList.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Debug\RadioList.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Debug\RadioList.lib" /MACHINE:X86 Debug\Main.obj
+         Debug\Radiolist.obj
+         "C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Debug\Component.lib"
+         RadioList.vcxproj -> C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\Debug\RadioList.exe
+     1>Done Building Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\Tofes\RadioList\RadioList.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.37
