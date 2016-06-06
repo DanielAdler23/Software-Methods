@@ -5,6 +5,7 @@ Label::Label(int _width, string value)
 {
 	this->width = _width;
 	myString = value;
+	border = BorderType::None;
 }
 
 Label::~Label()
@@ -16,8 +17,12 @@ void Label::SetValue(string value)
 	myString = value;
 }
 
-void Label::Show() const
+void Label::Show()
 {
+	_graphics.setForeground(this->foreground);
+	_graphics.setBackground(this->background);
+	this->printBorder(height, width, left, top, border);
+	cout << myString;
 }
 
 void Label::Hide()
@@ -44,8 +49,10 @@ BorderType Label::getBorder()
 
 void Label::mouseEvent(MOUSE_EVENT_RECORD mer)
 {
+	//Do Nothing...
 }
 
-void Label::keyPress(KEY_EVENT_RECORD ker, COORD)
+void Label::keyPress(KEY_EVENT_RECORD ker)
 {
+	//Do Nothing...
 }

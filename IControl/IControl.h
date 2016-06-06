@@ -13,22 +13,15 @@ class IControl
 {
 protected:
 	int width, height = 3, left, top;
-	COORD coord;
-	BorderType border;
-	ForegroundColor foreground = ForegroundColor::White;
-	BackgroundColor background = BackgroundColor::Black;
-
+	static IControl* focus;
 	Graphics _graphics;
 	HANDLE _console;
 	DWORD _consoleMode;
-
-	static IControl* focus;
-
+	COORD coord;
+	BorderType border = BorderType::Single;
+	ForegroundColor foreground = ForegroundColor::White;
+	BackgroundColor background = BackgroundColor::Black;
 public:
-
-	static void setFocus(IControl& control);
-	static IControl& getFocus();
-
 	IControl(DWORD input = STD_INPUT_HANDLE, DWORD output = STD_OUTPUT_HANDLE);
 	~IControl();
 	void printBorder(int height, int width, int left, int top, BorderType type);
@@ -46,4 +39,7 @@ public:
 	virtual BorderType getBorder() = 0;
 	virtual void mouseEvent(MOUSE_EVENT_RECORD mer) = 0;
 	virtual void keyPress(KEY_EVENT_RECORD ker) = 0;
+
+	static void setFocus(IControl& control);
+	static IControl& getFocus();
 };

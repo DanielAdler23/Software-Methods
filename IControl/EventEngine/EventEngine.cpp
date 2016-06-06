@@ -12,7 +12,6 @@ EventEngine::~EventEngine()
 
 void EventEngine::run(IControl & c)
 {
-
 	c.Show();
 	IControl::setFocus(c);
 	
@@ -21,18 +20,15 @@ void EventEngine::run(IControl & c)
 		INPUT_RECORD record;
 		DWORD count;
 		ReadConsoleInput(_console, &record, 1, &count);
+		IControl* f = &IControl::getFocus();
 		switch (record.EventType)
 		{
 		case KEY_EVENT:
 		{
-			IControl* f = &IControl::getFocus();
-			
 			f->keyPress(record.Event.KeyEvent);
 		}
 		case MOUSE_EVENT:
 		{
-			IControl* f = &IControl::getFocus();
-
 			f->mouseEvent(record.Event.MouseEvent);
 		}
 		default:

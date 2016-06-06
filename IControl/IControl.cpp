@@ -1,26 +1,14 @@
 #include "IControl.h"
 
-
 IControl* IControl::focus = 0;
-
-void IControl::setFocus(IControl & control)
-{
-	focus = &control;
-}
-
-IControl & IControl::getFocus()
-{
-	return *focus;
-}
 
 IControl::IControl(DWORD input, DWORD output)
 	: _console(GetStdHandle(input)), _graphics(output)
 {
 	GetConsoleMode(_console, &_consoleMode);
 	SetConsoleMode(_console, ENABLE_WINDOW_INPUT | ENABLE_MOUSE_INPUT);
-
+	_graphics.setCursorVisibility(false);
 }
-
 
 IControl::~IControl()
 {
@@ -40,7 +28,8 @@ void IControl::printBorder(int height, int width, int left, int top, BorderType 
 		break;
 
 	case BorderType::None:
-		topLeft = ' '; topRight = ' '; bottomLeft = ' '; bottomRight = ' '; vertical = ' '; horizontal = ' ';
+		_graphics.moveTo(left, top);
+		return;
 		break;
 	}
 
@@ -66,8 +55,8 @@ void IControl::printBorder(int height, int width, int left, int top, BorderType 
 			}
 		}
 	}
+	_graphics.moveTo(left + 1, top + 1);
 }
-
 
 void IControl::setLeft(int _left)
 {
@@ -87,4 +76,14 @@ int IControl::getLeft()
 int IControl::getTop()
 {
 	return this->top;
+}
+
+void IControl::setFocus(IControl & control)
+{
+	focus = &control;
+}
+
+IControl & IControl::getFocus()
+{
+	return *focus;
 }

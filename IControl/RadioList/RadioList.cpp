@@ -27,7 +27,7 @@ void RadioList::SetSelectedIndex(size_t index)
 {
 }
 
-void RadioList::Show() const
+void RadioList::Show()
 {
 }
 

@@ -36,10 +36,10 @@ int TextBox::getHeight()
 
 void TextBox::Show()
 {
+	_graphics.setCursorVisibility(true);
 	_graphics.setForeground(this->foreground);
 	_graphics.setBackground(this->background);
 	this->printBorder(height, width, left, top, border);
-	_graphics.moveTo(left + 1, top + 1);
 }
 
 void TextBox::Hide()
@@ -68,11 +68,12 @@ BorderType TextBox::getBorder()
 
 void TextBox::mouseEvent(MOUSE_EVENT_RECORD mer)
 {
+	int x = mer.dwMousePosition.X;
+	int y = mer.dwMousePosition.Y;
 	switch (mer.dwEventFlags)
 	{
 	case 0:
-
-		if (mer.dwButtonState == FROM_LEFT_1ST_BUTTON_PRESSED && mer.dwMousePosition.Y == top + 1 && mer.dwMousePosition.X > left && mer.dwMousePosition.X < left + width)
+		if (mer.dwButtonState == FROM_LEFT_1ST_BUTTON_PRESSED && y == top + 1 && x > left && x < left + width)
 		{
 			_graphics.moveTo(mer.dwMousePosition.X, top + 1);
 		}

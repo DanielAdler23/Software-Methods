@@ -12,7 +12,7 @@ public:
 	~RadioList();
 	size_t GetSelectedIndex();
 	void SetSelectedIndex(size_t index);
-	virtual void Show() const;
+	virtual void Show();
 	virtual void Hide();
 	virtual void SetForeground(ForegroundColor color);
 	virtual void SetBackground(BackgroundColor color);

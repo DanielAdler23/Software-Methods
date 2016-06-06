@@ -1,8 +1,11 @@
-﻿Build started 06-Jun-16 12:18:33 AM.
-     1>Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\ComboBox\ComboBox.vcxproj" on node 5 (Build target(s)).
+﻿Build started 06-Jun-16 6:53:41 PM.
+     1>Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\ComboBox\ComboBox.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\ComboBox.pdb" /Gd /TP /analyze- /errorReport:prompt ComboBox.cpp
          ComboBox.cpp
+     1>c:\users\daniel\documents\github\methods-course\icontrol\combobox\combobox.cpp(33): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\daniel\documents\github\methods-course\icontrol\combobox\combobox.cpp(68): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\daniel\documents\github\methods-course\icontrol\combobox\combobox.cpp(153): warning C4018: '<': signed/unsigned mismatch
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Debug\ComboBox.lib" /NOLOGO Debug\ComboBox.obj
          ComboBox.vcxproj -> C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Debug\ComboBox.lib
@@ -10,4 +13,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.12
+Time Elapsed 00:00:01.59
