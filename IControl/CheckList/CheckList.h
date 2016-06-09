@@ -11,13 +11,13 @@ protected:
 	bool ifBorder = 0;
 public:
 	CheckList();
-	CheckList(int _height, int _width, vector<string>& _options);
+	CheckList(int _height, int _width, vector<string> _options);
 	~CheckList();
 	vector<size_t> GetSelectedIndices();
 	void SelectIndex(size_t index);
 	void DeselectIndex(size_t index);
-	void mouseMove(int _row);
-	void mouseClick(int _y);
+	virtual void mouseMove(int _row);
+	virtual void mouseClick(int _y);
 	virtual int getWidth();
 	virtual int getHeight();
 	virtual void Show();
@@ -28,5 +28,6 @@ public:
 	virtual BorderType getBorder();
 	virtual void mouseEvent(MOUSE_EVENT_RECORD mer);
 	virtual void keyPress(KEY_EVENT_RECORD ker);
+	virtual bool canGetFocus();
 };
 

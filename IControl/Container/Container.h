@@ -16,6 +16,7 @@ public:
 	virtual void SetBackground(BackgroundColor color) = 0;
 	virtual void SetBorder(BorderType border) = 0;
 	virtual void mouseEvent(MOUSE_EVENT_RECORD mer) = 0;
-	virtual void keyPress(KEY_EVENT_RECORD ker, COORD) = 0;
+	virtual void keyPress(KEY_EVENT_RECORD ker) = 0;
+	virtual bool canGetFocus() = 0;
 };
 

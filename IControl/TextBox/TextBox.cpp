@@ -36,7 +36,6 @@ int TextBox::getHeight()
 
 void TextBox::Show()
 {
-	_graphics.setCursorVisibility(true);
 	_graphics.setForeground(this->foreground);
 	_graphics.setBackground(this->background);
 	this->printBorder(height, width, left, top, border);
@@ -138,4 +137,9 @@ void TextBox::keyPress(KEY_EVENT_RECORD ker)
 			cout << ker.uChar.AsciiChar;
 		}
 	}	
+}
+
+bool TextBox::canGetFocus()
+{
+	return true;
 }

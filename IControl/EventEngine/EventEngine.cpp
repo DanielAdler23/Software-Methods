@@ -1,5 +1,6 @@
 #include "EventEngine.h"
 
+
 EventEngine::EventEngine(DWORD input, DWORD output) : _console(GetStdHandle(input))
 {
 	GetConsoleMode(_console, &_consoleMode);
@@ -13,7 +14,7 @@ EventEngine::~EventEngine()
 void EventEngine::run(IControl & c)
 {
 	c.Show();
-	IControl::setFocus(c);
+	//IControl::setFocus(c);
 	
 	for (;;)
 	{
@@ -25,7 +26,10 @@ void EventEngine::run(IControl & c)
 		{
 		case KEY_EVENT:
 		{
-			f->keyPress(record.Event.KeyEvent);
+			if (record.Event.KeyEvent.wVirtualKeyCode == VK_TAB)
+				moveFocus(c, f);
+			else
+				f->keyPress(record.Event.KeyEvent);
 		}
 		case MOUSE_EVENT:
 		{
@@ -36,4 +40,17 @@ void EventEngine::run(IControl & c)
 			break;
 		}
 	}
+}
+
+
+void EventEngine::moveFocus(IControl &main, IControl *focused)
+{
+	vector<IControl*> controls;
+	main.getAllControls(controls);
+	auto it = find(controls.begin(), controls.end(), focused);
+	do
+		if (++it == controls.end())
+			it = controls.begin();
+	while (!(*it)->canGetFocus());
+	IControl::setFocus(**it);
 }

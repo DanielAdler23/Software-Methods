@@ -78,6 +78,11 @@ int IControl::getTop()
 	return this->top;
 }
 
+void IControl::getAllControls(vector<IControl*>& v)
+{
+	v.push_back(this);
+}
+
 void IControl::setFocus(IControl & control)
 {
 	focus = &control;
@@ -87,3 +92,5 @@ IControl & IControl::getFocus()
 {
 	return *focus;
 }
+
+

@@ -29,13 +29,14 @@ void Label::Hide()
 {
 }
 
-void Label::SetForeground(ForegroundColor color)
-{
-}
-
-void Label::SetBackground(BackgroundColor color)
-{
-}
+//void Label::SetForeground(ForegroundColor color)
+//{
+//
+//}
+//
+//void Label::SetBackground(BackgroundColor color)
+//{
+//}
 
 void Label::SetBorder(BorderType _border)
 {
@@ -55,4 +56,9 @@ void Label::mouseEvent(MOUSE_EVENT_RECORD mer)
 void Label::keyPress(KEY_EVENT_RECORD ker)
 {
 	//Do Nothing...
+}
+
+bool Label::canGetFocus()
+{
+	return false;
 }

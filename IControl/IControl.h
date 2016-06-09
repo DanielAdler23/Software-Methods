@@ -40,6 +40,8 @@ public:
 	virtual void mouseEvent(MOUSE_EVENT_RECORD mer) = 0;
 	virtual void keyPress(KEY_EVENT_RECORD ker) = 0;
 
+	virtual void getAllControls(vector<IControl*> &v);
+	virtual bool canGetFocus() = 0;
 	static void setFocus(IControl& control);
 	static IControl& getFocus();
 };

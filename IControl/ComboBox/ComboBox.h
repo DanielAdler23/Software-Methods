@@ -26,5 +26,6 @@ public:
 	virtual BorderType getBorder();
 	virtual void mouseEvent(MOUSE_EVENT_RECORD mer);
 	virtual void keyPress(KEY_EVENT_RECORD ker);
+	virtual bool canGetFocus();
 };
 

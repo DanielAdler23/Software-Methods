@@ -213,3 +213,8 @@ void ComboBox::keyPress(KEY_EVENT_RECORD ker)
 		//Do nothing...
 	}
 }
+
+bool ComboBox::canGetFocus()
+{
+	return true;
+}

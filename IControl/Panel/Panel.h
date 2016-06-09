@@ -4,9 +4,12 @@
 
 class Panel: public Container
 {
+protected:
+	
+	
 public:
 	Panel();
-	Panel(int _width, int _height);
+	Panel(int _height, int _width);
 	~Panel();
 	virtual int getWidth();
 	virtual int getHeight();
@@ -18,6 +21,9 @@ public:
 	virtual void SetBorder(BorderType _border);
 	virtual BorderType getBorder();
 	virtual void mouseEvent(MOUSE_EVENT_RECORD mer);
-	virtual void keyPress(KEY_EVENT_RECORD ker, COORD);
+	virtual void keyPress(KEY_EVENT_RECORD ker);
+	virtual bool canGetFocus();
+
+	virtual void getAllControls(vector<IControl*> &v);
 };
 

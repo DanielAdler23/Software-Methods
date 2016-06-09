@@ -1,9 +1,9 @@
-﻿Build started 06-Jun-16 10:47:44 AM.
+﻿Build started 09-Jun-16 3:17:41 PM.
      1>Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Panel\Panel.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\Panel.pdb" /Gd /TP /analyze- /errorReport:prompt Panel.cpp
          Panel.cpp
-     1>c:\users\daniel\documents\github\methods-course\icontrol\panel\panel.cpp(40): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\daniel\documents\github\methods-course\icontrol\panel\panel.cpp(39): warning C4018: '<': signed/unsigned mismatch
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Debug\Panel.lib" /NOLOGO Debug\Panel.obj
          Panel.vcxproj -> C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Debug\Panel.lib
@@ -11,4 +11,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.82
+Time Elapsed 00:00:01.81

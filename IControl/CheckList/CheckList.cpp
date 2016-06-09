@@ -6,7 +6,7 @@ CheckList::CheckList()
 {
 }
 
-CheckList::CheckList(int _height, int _width, vector<string>& _options)
+CheckList::CheckList(int _height, int _width, vector<string> _options)
 {
 	this->height = _height;
 	this->width = _width;
@@ -99,13 +99,13 @@ void CheckList::mouseEvent(MOUSE_EVENT_RECORD mer)
 	{
 	case 0:
 
-		if (mer.dwButtonState == FROM_LEFT_1ST_BUTTON_PRESSED && y >= top && y <= top + options.size() && x >= left && x < left + width)
+		if (mer.dwButtonState == FROM_LEFT_1ST_BUTTON_PRESSED && y >= top && y <= top + options.size() - 1 && x >= left && x < left + width)
 		{
 			mouseClick(y);
 		}
 		break;
 	case MOUSE_MOVED:
-		if (y >= top && y <= top + options.size() && x >= left && x < left + width)
+		if (y >= top && y <= top + options.size() - 1 && x >= left && x < left + width)
 		{
 			mouseMove(y);
 		}
@@ -197,7 +197,7 @@ void CheckList::keyPress(KEY_EVENT_RECORD ker)
 
 void CheckList::mouseMove(int _row)
 {
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < options.size(); i++)
 	{
 		_graphics.moveTo(left, top + i);
 		if (i == _row - top)
@@ -231,4 +231,9 @@ void CheckList::mouseClick(int _y)
 		cout << " ";
 		chosen[_y - top]--;
 	}
+}
+
+bool CheckList::canGetFocus()
+{
+	return true;
 }
