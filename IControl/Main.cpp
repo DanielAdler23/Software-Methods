@@ -43,7 +43,7 @@ int main()
 	panel1.addControl(combobox1, 1, 1);
 	panel1.addControl(textbox1, 1, 10);
 	panel1.addControl(radiolist1, 1, 15);
-	panel1.addControl(label1, 1, 20);
+	panel1.addControl(label1, 20, 20);
 
 
 	EventEngine engine;

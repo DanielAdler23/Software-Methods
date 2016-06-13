@@ -86,6 +86,7 @@ void IControl::getAllControls(vector<IControl*>& v)
 void IControl::setFocus(IControl & control)
 {
 	focus = &control;
+	control._graphics.moveTo(control.getLeft() + 1, control.getTop() + 1);
 }
 
 IControl & IControl::getFocus()

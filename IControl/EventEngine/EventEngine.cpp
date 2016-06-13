@@ -14,7 +14,6 @@ EventEngine::~EventEngine()
 void EventEngine::run(IControl & c)
 {
 	c.Show();
-	//IControl::setFocus(c);
 	
 	for (;;)
 	{
