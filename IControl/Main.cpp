@@ -15,8 +15,6 @@ using namespace std;
 int main()
 {
 	vector<string> options = { "Option 111111111", "Option 2222222", "Option 3", "Option 4", "Option 5" };
-	
-	MsgBox nsg(10,30,"blaablaa","aaaa");
 
 	Label lName(20);
 	lName.SetValue("Name: ");
@@ -75,7 +73,6 @@ int main()
 	main.addControl(rSex, 25, 11);
 	main.addControl(clInterests, 25, 15);
 	main.addControl(nAge, 25, 20);
-	main.addControl(nsg, 35, 30);
 
 
 	main.addControl(bSubmit, 1, 22);

@@ -1,2 +1,13 @@
-﻿  Button.cpp
-  Button.vcxproj -> C:\Users\Ohad\OneDrive\לימודים\2015-16\ב\שיטות בהנדסת תוכנה\final\IControl11.7.v3\Debug\Button.lib
+﻿Build started 14-Jul-16 12:11:21 AM.
+     1>Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Button\Button.vcxproj" on node 5 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\Button.pdb" /Gd /TP /analyze- /errorReport:prompt Button.cpp
+         Button.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Debug\Button.lib" /NOLOGO Debug\Button.obj
+         Button.vcxproj -> C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Debug\Button.lib
+     1>Done Building Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Button\Button.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.81

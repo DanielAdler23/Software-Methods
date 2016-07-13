@@ -1,3 +1,14 @@
-﻿  NumericBox.cpp
-c:\users\ohad\onedrive\לימודים\2015-16\ב\שיטות בהנדסת תוכנה\final\icontrol11.7.v3\numericbox\numericbox.cpp(72): warning C4018: '<': signed/unsigned mismatch
-  NumericBox.vcxproj -> C:\Users\Ohad\OneDrive\לימודים\2015-16\ב\שיטות בהנדסת תוכנה\final\IControl11.7.v3\Debug\NumericBox.lib
+﻿Build started 14-Jul-16 12:11:21 AM.
+     1>Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\NumericBox\NumericBox.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\NumericBox.pdb" /Gd /TP /analyze- /errorReport:prompt NumericBox.cpp
+         NumericBox.cpp
+     1>c:\users\daniel\documents\github\methods-course\icontrol\numericbox\numericbox.cpp(72): warning C4018: '<': signed/unsigned mismatch
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Debug\NumericBox.lib" /NOLOGO Debug\NumericBox.obj
+         NumericBox.vcxproj -> C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Debug\NumericBox.lib
+     1>Done Building Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\NumericBox\NumericBox.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.68
