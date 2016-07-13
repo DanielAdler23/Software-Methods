@@ -15,6 +15,11 @@ Panel::~Panel()
 {
 }
 
+string Panel::getType()
+{
+	return "Panel";
+}
+
 int Panel::getWidth()
 {
 	return this->width;
@@ -34,18 +39,26 @@ void Panel::addControl(IControl & control, int _left, int _top)
 
 void Panel::Show()
 {
-	IControl::setFocus(*controllers[0]);
-	this->printBorder(height, width, left, top, border);
+	IControl::Show();
 	for (int i = 0; i < controllers.size(); i++)
 	{
-		controllers[i]->Show();
+		if(controllers[i]->getVisible() == true)
+			controllers[i]->Show();
 	}
 	IControl* tmp = &IControl::getFocus();
-	_graphics.moveTo(tmp->getLeft() + 1, tmp->getTop() + 1); 
+	if(tmp->getType() == "TextBox")
+		_graphics.moveTo(tmp->getLeft() + tmp->GetValue().size(), tmp->getTop() + 1);
+	else
+		_graphics.moveTo(tmp->getLeft() + 1, tmp->getTop() + 1); 
 }
 
 void Panel::Hide()
 {
+}
+
+bool Panel::Isvisible()
+{
+	return this->visible;
 }
 
 void Panel::SetForeground(ForegroundColor color)
@@ -81,10 +94,9 @@ bool Panel::canGetFocus()
 
 void Panel::getAllControls(vector<IControl*>& v)
 {
-	v.push_back(this);
-	for (auto c : controllers)
+	for (int i = 0; i < controllers.size(); i++)
 	{
-		c->getAllControls(v);
+		v.push_back(controllers[i]);
 	}
 }
 

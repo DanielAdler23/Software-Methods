@@ -1,16 +1,5 @@
-﻿Build started 09-Jun-16 3:17:40 PM.
-     1>Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\RadioList\RadioList.vcxproj" on node 5 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\RadioList.pdb" /Gd /TP /analyze- /errorReport:prompt RadioList.cpp
-         RadioList.cpp
-     1>c:\users\daniel\documents\github\methods-course\icontrol\radiolist\radiolist.cpp(142): warning C4018: '>=': signed/unsigned mismatch
-     1>c:\users\daniel\documents\github\methods-course\icontrol\radiolist\radiolist.cpp(191): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\daniel\documents\github\methods-course\icontrol\radiolist\radiolist.cpp(231): warning C4018: '<': signed/unsigned mismatch
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Debug\RadioList.lib" /NOLOGO Debug\RadioList.obj
-         RadioList.vcxproj -> C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Debug\RadioList.lib
-     1>Done Building Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\RadioList\RadioList.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:02.27
+﻿  RadioList.cpp
+c:\users\ohad\onedrive\לימודים\2015-16\ב\שיטות בהנדסת תוכנה\final\icontrol11.7.v3\radiolist\radiolist.cpp(136): warning C4018: '>=': signed/unsigned mismatch
+c:\users\ohad\onedrive\לימודים\2015-16\ב\שיטות בהנדסת תוכנה\final\icontrol11.7.v3\radiolist\radiolist.cpp(191): warning C4018: '<': signed/unsigned mismatch
+c:\users\ohad\onedrive\לימודים\2015-16\ב\שיטות בהנדסת תוכנה\final\icontrol11.7.v3\radiolist\radiolist.cpp(237): warning C4018: '<': signed/unsigned mismatch
+  RadioList.vcxproj -> C:\Users\Ohad\OneDrive\לימודים\2015-16\ב\שיטות בהנדסת תוכנה\final\IControl11.7.v3\Debug\RadioList.lib

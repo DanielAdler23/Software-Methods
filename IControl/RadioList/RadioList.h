@@ -4,17 +4,16 @@
 
 class RadioList: public CheckList
 {
-protected:
-	//vector<string> options;
+	
 public:
 	RadioList();
 	RadioList(int _height, int _width, vector<string> _options);
 	~RadioList();
+	virtual string getType();
 	void clearAll();
-	size_t GetSelectedIndex();
-	void SetSelectedIndex(size_t index);
 	virtual void mouseMove(int _row);
 	virtual void mouseClick(int _y);
+	virtual bool Isvisible();
 	//virtual void Show();
 	//virtual void Hide();
 	//virtual void SetForeground(ForegroundColor color);

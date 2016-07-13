@@ -4,14 +4,18 @@
 
 class Label: public TextBox
 {
-protected:
-	string myString;
+
 public:
+	Label();
 	Label(int _width, string value);
+	Label(int _width);
 	~Label();
+	virtual string getType();
 	void SetValue(string value);
 	virtual void Show();
 	virtual void Hide();
+	virtual bool Isvisible();
+	void setWidth(int width);
 	//virtual void SetForeground(ForegroundColor color);
 	//virtual void SetBackground(BackgroundColor color);
 	virtual void SetBorder(BorderType _border);

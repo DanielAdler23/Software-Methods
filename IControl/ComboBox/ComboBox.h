@@ -11,6 +11,7 @@ public:
 	ComboBox();
 	ComboBox(int _width, vector<string> _options);
 	~ComboBox();
+	virtual string getType();
 	size_t GetSelectedIndex();
 	void SetSelectedIndex(size_t index);
 	void showList();
@@ -20,6 +21,7 @@ public:
 	virtual int getHeight();
 	virtual void Show();
 	virtual void Hide();
+	virtual bool Isvisible();
 	virtual void SetForeground(ForegroundColor color);
 	virtual void SetBackground(BackgroundColor color);
 	virtual void SetBorder(BorderType _border);
@@ -27,5 +29,6 @@ public:
 	virtual void mouseEvent(MOUSE_EVENT_RECORD mer);
 	virtual void keyPress(KEY_EVENT_RECORD ker);
 	virtual bool canGetFocus();
+	int getPrinted() { return printed; };
 };
 

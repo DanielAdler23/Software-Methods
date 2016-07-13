@@ -5,17 +5,19 @@
 class TextBox: public IControl
 {
 protected:
-	string myString;
+	//string myString;
 public:
 	TextBox();
 	TextBox(int _width);
 	~TextBox();
-	void SetValue(string value);
-	string GetValue();
+	//void SetValue(string value);
+	//string GetValue();
+	string getType();
 	virtual int getWidth();
 	virtual int getHeight();
 	virtual void Show();
 	virtual void Hide();
+	virtual bool Isvisible();
 	virtual void SetForeground(ForegroundColor color);
 	virtual void SetBackground(BackgroundColor color);
 	virtual void SetBorder(BorderType _border);

@@ -11,11 +11,13 @@ public:
 	Panel();
 	Panel(int _height, int _width);
 	~Panel();
+	virtual string getType();
 	virtual int getWidth();
 	virtual int getHeight();
 	virtual void addControl(IControl & control, int _left, int _top);
 	virtual void Show();
 	virtual void Hide();
+	virtual bool Isvisible();
 	virtual void SetForeground(ForegroundColor color);
 	virtual void SetBackground(BackgroundColor color);
 	virtual void SetBorder(BorderType _border);

@@ -4,6 +4,7 @@
 
 TextBox::TextBox()
 {
+
 }
 
 TextBox::TextBox(int _width)
@@ -15,13 +16,19 @@ TextBox::~TextBox()
 {
 }
 
-void TextBox::SetValue(string value)
-{
-}
+//void TextBox::SetValue(string value)
+//{
+//	this->myString = value;
+//}
+//
+//string TextBox::GetValue()
+//{
+//	return this->myString;
+//}
 
-string TextBox::GetValue()
+string TextBox::getType()
 {
-	return string();
+	return "TextBox";
 }
 
 int TextBox::getWidth()
@@ -36,13 +43,20 @@ int TextBox::getHeight()
 
 void TextBox::Show()
 {
-	_graphics.setForeground(this->foreground);
-	_graphics.setBackground(this->background);
-	this->printBorder(height, width, left, top, border);
+	if (visible == true)
+	IControl::Show();
+	if (this->myString.size() > this->width - 2)
+		this->myString.resize(this->width - 2);
+	_graphics.write(myString);
 }
 
 void TextBox::Hide()
 {
+}
+
+bool TextBox::Isvisible()
+{
+	return this->visible;
 }
 
 void TextBox::SetForeground(ForegroundColor color)
@@ -85,7 +99,6 @@ void TextBox::mouseEvent(MOUSE_EVENT_RECORD mer)
 
 void TextBox::keyPress(KEY_EVENT_RECORD ker)
 {
-	_graphics.setCursorVisibility(TRUE);
 	if (ker.bKeyDown)
 	{
 		if (ker.wVirtualKeyCode == VK_RETURN)
@@ -99,13 +112,17 @@ void TextBox::keyPress(KEY_EVENT_RECORD ker)
 				_graphics.moveTo(left + 1, top + 1);
 			else
 			{
-				cout << "\b" << " " << "\b";
+				//cout << "\b" << " " << "\b";
+				_graphics.write("\b");
+				_graphics.write(" ");
+				_graphics.write("\b");
 				myString.erase(coord.X - left - 2, 1);
 				_graphics.moveTo(left + 1, top + 1);
 				for (int j = 0; j < width - 2; j++)
-					cout << " ";
+					_graphics.write(" ");
+					//cout << " ";
 				_graphics.moveTo(left + 1, top + 1);
-				cout << myString;
+				_graphics.write(myString);
 				_graphics.moveTo(coord.X - 1, coord.Y);
 			}
 		}
@@ -134,7 +151,8 @@ void TextBox::keyPress(KEY_EVENT_RECORD ker)
 				myString.pop_back();
 			}
 			myString += ker.uChar.AsciiChar;
-			cout << ker.uChar.AsciiChar;
+			string str(1, ker.uChar.AsciiChar);
+			_graphics.write(str);
 		}
 	}	
 }

@@ -1,13 +1,2 @@
-﻿Build started 09-Jun-16 3:17:40 PM.
-     1>Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Container\Container.vcxproj" on node 9 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\Container.pdb" /Gd /TP /analyze- /errorReport:prompt Container.cpp
-         Container.cpp
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Debug\Container.lib" /NOLOGO Debug\Container.obj
-         Container.vcxproj -> C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Debug\Container.lib
-     1>Done Building Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Container\Container.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:02.09
+﻿  Container.cpp
+  Container.vcxproj -> C:\Users\Ohad\OneDrive\לימודים\2015-16\ב\שיטות בהנדסת תוכנה\final\IControl11.7.v3\Debug\Container.lib

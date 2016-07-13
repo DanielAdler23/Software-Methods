@@ -82,6 +82,54 @@ void Graphics::setCursorVisibility(bool isVisible)
 	SetConsoleCursorInfo(_console, &cci);
 }
 
+BackgroundColor Graphics::getBackground()
+{
+	return _background;
+}
+
+ForegroundColor Graphics::getForground()
+{
+	return _foreground;
+}
+
+void Graphics::inverseAtt()
+{
+	ForegroundColor tmpFor = getForground();
+	BackgroundColor tmpBack = getBackground();
+	setForeground(convertToColorFor(tmpBack));
+	setBackground(convertToColorBack(tmpFor));
+}
+
+BackgroundColor Graphics::convertToColorBack(ForegroundColor forColor)
+{
+	BackgroundColor color = BackgroundColor::White;
+	switch (forColor)
+	{
+	case ForegroundColor::Black:	color = BackgroundColor::Black; break;
+	case ForegroundColor::Blue:		color = BackgroundColor::Blue; break;
+	case ForegroundColor::Green:	color = BackgroundColor::Green; break;
+	case ForegroundColor::Red:		color = BackgroundColor::Red; break;
+	case ForegroundColor::Purple:	color = BackgroundColor::Purple; break;
+	case ForegroundColor::White:	color = BackgroundColor::White; break;
+	}
+	return color;
+}
+
+ForegroundColor Graphics::convertToColorFor(BackgroundColor backColor)
+{
+	ForegroundColor color = ForegroundColor::Black;
+	switch (backColor)
+	{
+	case BackgroundColor::Black:	color = ForegroundColor::Black; break;
+	case BackgroundColor::Blue:		color = ForegroundColor::Blue; break;
+	case BackgroundColor::Green:	color = ForegroundColor::Green; break;
+	case BackgroundColor::Red:		color = ForegroundColor::Red; break;
+	case BackgroundColor::Purple:	color = ForegroundColor::Purple; break;
+	case BackgroundColor::White:	color = ForegroundColor::White; break;
+	}
+	return color;
+}
+
 void Graphics::updateConsoleAttributes()
 {
 	DWORD attributes = 0;

@@ -1,55 +1,89 @@
 #include "IControl.h"
 #include "Panel\Panel.h"
 #include "Label\Label.h"
+#include "Button\Button.h"
 #include "TextBox\TextBox.h"
 #include "ComboBox\ComboBox.h"
 #include "CheckList\CheckList.h"
 #include "RadioList\RadioList.h"
+#include "NumericBox\NumericBox.h"
 #include "EventEngine\EventEngine.h"
+#include "MessageBox\MessageBox.h"
 
 using namespace std;
 
 int main()
 {
-	vector<string> options = { "Option 1", "Option 2", "Option 3", "Option 4", "Option 5" };
+	vector<string> options = { "Option 111111111", "Option 2222222", "Option 3", "Option 4", "Option 5" };
+	
+	MsgBox nsg(10,30,"blaablaa","aaaa");
 
-	Label label1(10, "Hello, World!");
-	label1.SetForeground(ForegroundColor::Red);
-	label1.SetBackground(BackgroundColor::Teal);
+	Label lName(20);
+	lName.SetValue("Name: ");
 
-	IControl::setFocus(label1);
+	Label lAddress(20);
+	lAddress.SetValue("Address:");
+	Label lCountry(20);
+	lCountry.SetValue("Country:");
+	Label lSex(20);
+	lSex.SetValue("Sex:");
+	Label lInterests(20);
+	lInterests.SetValue("Interests:");
+	Label lAge(20);
+	lAge.SetValue("Age:");
+	
+	
+	TextBox tName(20);
+	tName.SetValue("Sherlock Holmes");
+	tName.SetBorder(BorderType::Single);
 
-	TextBox textbox1(20);
-	textbox1.SetBorder(BorderType::Double);
-	textbox1.SetForeground(ForegroundColor::Teal);
-	textbox1.setLeft(10);
-	textbox1.setTop(10);
+	TextBox tAddress(25);
+	tAddress.SetValue("221B Baker Street, London");
+	tAddress.SetBorder(BorderType::Single);
+	
+	ComboBox cCountry(20, { "Israel", "Great Britain", "United States" });
+	cCountry.SetSelectedIndex(1);
+	cCountry.SetBorder(BorderType::Single);
+	
+	RadioList rSex(2, 15, { "Male", "Female" });
+	rSex.SetBorder(BorderType::Single);
+	
+	CheckList clInterests(3, 15, { "Sports", "Books", "Movies" });
+	clInterests.SelectIndex(1);
+	clInterests.SetBorder(BorderType::Single);
+	
+	NumericBox nAge(15, 18, 120);
+	nAge.setValue(23);
+	nAge.SetBorder(BorderType::Single);
+	
+	Button bSubmit(10);
+	bSubmit.SetValue("Submit");
+	bSubmit.SetBorder(BorderType::Double);
 
 	
-
-	ComboBox combobox1(20, options);
-	combobox1.SetForeground(ForegroundColor::Purple);
-	combobox1.setLeft(15);
-	combobox1.setTop(10);
-
-	CheckList checklist1(10, 20, options);
-	checklist1.SetBorder(BorderType::Single);
-
-	RadioList radiolist1(10, 20, options);
-
-
-	Panel panel1(25, 60);
-
-	panel1.addControl(combobox1, 1, 1);
-	panel1.addControl(textbox1, 1, 10);
-	panel1.addControl(radiolist1, 1, 15);
-	panel1.addControl(label1, 20, 20);
+	
+	Panel main;
+	main.addControl(lName, 1, 2);
+	main.addControl(lAddress, 1, 5);
+	main.addControl(lCountry, 1, 8);
+	main.addControl(lSex, 1, 11);
+	main.addControl(lInterests, 1, 15);
+	main.addControl(lAge, 1, 20);
+	main.addControl(tName, 25, 2);
+	main.addControl(tAddress, 25, 5);
+	main.addControl(cCountry, 25, 8);
+	main.addControl(rSex, 25, 11);
+	main.addControl(clInterests, 25, 15);
+	main.addControl(nAge, 25, 20);
+	main.addControl(nsg, 35, 30);
 
 
+	main.addControl(bSubmit, 1, 22);
+	IControl::setFocus(tName);
 	EventEngine engine;
-
-	engine.run(panel1);
-
-	getchar();
+	engine.run(main);
 	return 0;
+	
+
+
 }

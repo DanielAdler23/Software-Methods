@@ -26,6 +26,11 @@ public:
 	void write(wstring s);
 	void write(int x, int y, wstring s);
 	void setCursorVisibility(bool isVisible);
+	BackgroundColor getBackground();
+	ForegroundColor getForground();
+	void inverseAtt();
+	BackgroundColor convertToColorBack(ForegroundColor forColor);
+	ForegroundColor convertToColorFor(BackgroundColor backColor);
 private:
 	HANDLE _console;
 	ForegroundColor _foreground;

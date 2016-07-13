@@ -1,0 +1,16 @@
+﻿Build started 16-Jun-16 11:50:47 AM.
+     1>Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\ComboBox\ComboBox.vcxproj" on node 6 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt ComboBox.cpp
+         ComboBox.cpp
+     1>ComboBox.cpp(33): warning C4018: '<': signed/unsigned mismatch
+     1>ComboBox.cpp(68): warning C4018: '<': signed/unsigned mismatch
+     1>ComboBox.cpp(153): warning C4018: '<': signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Release\ComboBox.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Release\ComboBox.pdb" /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Release\ComboBox.lib" /MACHINE:X86 /SAFESEH Release\ComboBox.obj
+     1>LINK : fatal error LNK1561: entry point must be defined
+     1>Done Building Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\ComboBox\ComboBox.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.84

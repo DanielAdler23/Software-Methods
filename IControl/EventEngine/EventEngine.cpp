@@ -1,6 +1,7 @@
 #include "EventEngine.h"
 
 
+
 EventEngine::EventEngine(DWORD input, DWORD output) : _console(GetStdHandle(input))
 {
 	GetConsoleMode(_console, &_consoleMode);
@@ -25,13 +26,27 @@ void EventEngine::run(IControl & c)
 		{
 		case KEY_EVENT:
 		{
-			if (record.Event.KeyEvent.wVirtualKeyCode == VK_TAB)
-				moveFocus(c, f);
-			else
-				f->keyPress(record.Event.KeyEvent);
+			if (record.Event.KeyEvent.bKeyDown)
+			{
+				if (record.Event.KeyEvent.wVirtualKeyCode == VK_TAB)
+					moveFocus(c, f);
+				else
+					f->keyPress(record.Event.KeyEvent);
+			}
+			
 		}
 		case MOUSE_EVENT:
 		{
+			if(record.Event.MouseEvent.dwButtonState==FROM_LEFT_1ST_BUTTON_PRESSED)
+			{
+				if (f->getType() == "ComboBox")
+				{
+					ComboBox* combo = dynamic_cast  <ComboBox*>(f);
+					if (combo->getPrinted() == 1) {
+						c.Show();
+					}
+				}
+			}
 			f->mouseEvent(record.Event.MouseEvent);
 		}
 		default:

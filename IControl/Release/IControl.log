@@ -1,0 +1,46 @@
+﻿Build started 16-Jun-16 11:50:50 AM.
+     1>Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\IControl.vcxproj" on node 5 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt IControl.cpp Main.cpp
+         IControl.cpp
+         Main.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Release\IControl.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Release\IControl.pdb" /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Release\IControl.lib" /MACHINE:X86 /SAFESEH Release\IControl.obj
+         Release\Main.obj
+     1>IControl.obj : error LNK2001: unresolved external symbol "public: void __thiscall Graphics::setCursorVisibility(bool)" (?setCursorVisibility@Graphics@@QAEX_N@Z)
+     1>IControl.obj : error LNK2001: unresolved external symbol "public: void __thiscall Graphics::moveTo(int,int)" (?moveTo@Graphics@@QAEXHH@Z)
+     1>IControl.obj : error LNK2001: unresolved external symbol "public: void __thiscall Graphics::resetColor(void)" (?resetColor@Graphics@@QAEXXZ)
+     1>IControl.obj : error LNK2001: unresolved external symbol "public: __thiscall Graphics::Graphics(unsigned long)" (??0Graphics@@QAE@K@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: void __thiscall EventEngine::run(class IControl &)" (?run@EventEngine@@QAEXAAVIControl@@@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: virtual __thiscall EventEngine::~EventEngine(void)" (??1EventEngine@@UAE@XZ)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall EventEngine::EventEngine(unsigned long,unsigned long)" (??0EventEngine@@QAE@KK@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: void __thiscall Button::SetValue(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?SetValue@Button@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall Button::~Button(void)" (??1Button@@QAE@XZ)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall Button::Button(int)" (??0Button@@QAE@H@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall CheckList::SetBorder(enum BorderType)" (?SetBorder@CheckList@@UAEXW4BorderType@@@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall CheckList::~CheckList(void)" (??1CheckList@@QAE@XZ)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall CheckList::CheckList(int,int,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >)" (??0CheckList@@QAE@HHV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall TextBox::SetBorder(enum BorderType)" (?SetBorder@TextBox@@UAEXW4BorderType@@@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall TextBox::SetBackground(enum BackgroundColor)" (?SetBackground@TextBox@@UAEXW4BackgroundColor@@@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall TextBox::SetForeground(enum ForegroundColor)" (?SetForeground@TextBox@@UAEXW4ForegroundColor@@@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall TextBox::~TextBox(void)" (??1TextBox@@QAE@XZ)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall TextBox::TextBox(int)" (??0TextBox@@QAE@H@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall NumericBox::~NumericBox(void)" (??1NumericBox@@QAE@XZ)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall NumericBox::NumericBox(int,int,int)" (??0NumericBox@@QAE@HHH@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall Panel::addControl(class IControl &,int,int)" (?addControl@Panel@@UAEXAAVIControl@@HH@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall Panel::~Panel(void)" (??1Panel@@QAE@XZ)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall Panel::Panel(int,int)" (??0Panel@@QAE@HH@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall RadioList::~RadioList(void)" (??1RadioList@@QAE@XZ)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall RadioList::RadioList(int,int,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >)" (??0RadioList@@QAE@HHV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ComboBox::SetForeground(enum ForegroundColor)" (?SetForeground@ComboBox@@UAEXW4ForegroundColor@@@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall ComboBox::~ComboBox(void)" (??1ComboBox@@QAE@XZ)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall ComboBox::ComboBox(int,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >)" (??0ComboBox@@QAE@HV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall Label::SetBorder(enum BorderType)" (?SetBorder@Label@@UAEXW4BorderType@@@Z)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall Label::~Label(void)" (??1Label@@QAE@XZ)
+     1>Main.obj : error LNK2001: unresolved external symbol "public: __thiscall Label::Label(int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Label@@QAE@HV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+     1>C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\Release\IControl.exe : fatal error LNK1120: 31 unresolved externals
+     1>Done Building Project "C:\Users\Daniel\Documents\GitHub\Methods-Course\IControl\IControl.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.67

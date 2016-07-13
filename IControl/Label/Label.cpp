@@ -1,6 +1,10 @@
 #include "Label.h"
 
 
+Label::Label()
+{
+}
+
 Label::Label(int _width, string value)
 {
 	this->width = _width;
@@ -8,8 +12,18 @@ Label::Label(int _width, string value)
 	border = BorderType::None;
 }
 
+Label::Label(int _width)
+{
+	this->width = _width;
+}
+
 Label::~Label()
 {
+}
+
+string Label::getType()
+{
+	return "Label";
 }
 
 void Label::SetValue(string value)
@@ -19,24 +33,23 @@ void Label::SetValue(string value)
 
 void Label::Show()
 {
-	_graphics.setForeground(this->foreground);
-	_graphics.setBackground(this->background);
-	this->printBorder(height, width, left, top, border);
-	cout << myString;
+	TextBox::Show();
+	//_graphics.write(myString);
 }
 
 void Label::Hide()
 {
 }
 
-//void Label::SetForeground(ForegroundColor color)
-//{
-//
-//}
-//
-//void Label::SetBackground(BackgroundColor color)
-//{
-//}
+bool Label::Isvisible()
+{
+	return this->visible;
+}
+
+void Label::setWidth(int width)
+{
+	this->width = width;
+}
 
 void Label::SetBorder(BorderType _border)
 {

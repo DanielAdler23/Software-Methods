@@ -17,6 +17,11 @@ ComboBox::~ComboBox()
 {
 }
 
+string ComboBox::getType()
+{
+	return "ComboBox";
+}
+
 size_t ComboBox::GetSelectedIndex()
 {
 	return size_t();
@@ -28,8 +33,10 @@ void ComboBox::SetSelectedIndex(size_t index)
 
 void ComboBox::showList()
 {
+
 	if (printed == 0)
 	{
+
 		for (int i = 0; i < options.size(); i++)
 		{
 			if (i == 0) {
@@ -48,15 +55,18 @@ void ComboBox::showList()
 	else
 	{
 		_graphics.resetColor();
-		for (int j = 0; j < 5; j++)
+		/*for (int j = 0; j < 5; j++)
 		{
 			_graphics.moveTo(left + 2, top + 3 + j);
-			for (int a = 0; a < 13; a++)
+			for (int a = 13; a > 0; a--)
 			{
-				_graphics.moveTo(left + 2 + a, top + 3 + j);
-				cout << " ";
+				_graphics.moveTo(left + 2 + a, top + 2 + j);
+				cout << ' ';
+
 			}
-		}
+			
+		}*/
+		
 		printed--;
 	}
 }
@@ -87,7 +97,11 @@ void ComboBox::mouseClick(int _y)
 		return;
 	_graphics.resetColor();
 	_graphics.moveTo(left + 1, top + 1);
+	for (int i = 0; i < width - 6; i++)
+		_graphics.write(" ");
+	_graphics.moveTo(left + 1, top + 1);
 	cout << options[row];
+	this->SetValue(options[row]);
 	showList();
 }
 
@@ -103,17 +117,23 @@ int ComboBox::getHeight()
 
 void ComboBox::Show()
 {
-	_graphics.setForeground(this->foreground);
-	_graphics.setBackground(this->background);
-	this->printBorder(height, width, left, top, border);
+	IControl::Show();
 	_graphics.moveTo(left + width - 5, top + 1);
 	cout << "\xB3";
 	_graphics.moveTo(left + width - 3, top + 1);
 	cout << "\x56";
+	_graphics.moveTo(left + 1, top + 1);
+	_graphics.write(this->myString);
+
 }
 
 void ComboBox::Hide()
 {
+}
+
+bool ComboBox::Isvisible()
+{
+	return this->visible;
 }
 
 void ComboBox::SetForeground(ForegroundColor color)
